@@ -3,6 +3,8 @@
     "license": "UNLICENSED",
     "scripts": {
         "start": "node server/index.ts",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "build": "webpack --config ./bundler/webpack.prod.js",
         "dev": "webpack serve --config ./bundler/webpack.dev.js"
     },
@@ -53,6 +55,7 @@
         "@types/react": "^17.0.43",
         "@types/react-dom": "^17.0.14",
         "@types/stats.js": "^0.17.0",
-        "@types/three": "^0.138.0"
+        "@types/three": "^0.138.0",
+        "gh-pages": "^6.1.1"
     }
 }
